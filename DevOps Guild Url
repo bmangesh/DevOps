@@ -1,0 +1,17 @@
+I wrote an demo storm application which processes apache httpd web server's log events in real time and stores the results in Cassandra. 
+[https://github.com/ashrithr/LogEventsProcessing]
+Component versions tested on:
+kafka - 0.7.2
+storm - 0.8.2
+cassandra - 1.0.12
+storm-kafka - 0.8.0-wip4
+-------------------------------------------------------------------------------------------------------------------
+We are using Storm as part of our server event log monitoring/auditing system. We send log messages from thousands of servers into a RabbitMQ cluster and then use Storm to check each message against a set of regular expressions. If there is a match (< 1% of messages), then the message is sent to a bolt that stores data in a Mongo database. Right now we are handling a load of somewhere around 5-10k messages per second, however we tested our existing RabbitMQ + Storm clusters up to about 50k per second. We have plans to do real time intrusion detection as an enhancement to the current log message reporting system.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+http://supervisord.org/ 
+---------------------------------------------------------------------------------------------------
+http://jansipke.nl/installing-a-storm-cluster-on-centos-hosts/
+----
+"memory is currently not an issue but don't assume it will never be an issue"-----
+http://loveforprogramming.quora.com/Distributed-Systems-Part-1-A-peek-into-consistent-hashing
+
