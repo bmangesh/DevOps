@@ -15,3 +15,12 @@ http://jansipke.nl/installing-a-storm-cluster-on-centos-hosts/
 "memory is currently not an issue but don't assume it will never be an issue"-----
 http://loveforprogramming.quora.com/Distributed-Systems-Part-1-A-peek-into-consistent-hashing
 
+------------------
+part of Storm's design is that the workers and the supervisor nodes should be able to die and Storm should be able to recover.
+----------------------
+Finally, as your cluster grows, your nimbus server will have plenty to do on its own and you want it to operate quickly so it doesn't slow down your workers since it could be a bottleneck if you don't give it adequate resources.
+------------------------------------------
+ Do we have any plugins available to do it. Any help on this would be greatly appreciated. 
+ -----------------------------------
+ Apache Storm and Kafka Cluster with Docker
+ -----------------------------------------------------------------
